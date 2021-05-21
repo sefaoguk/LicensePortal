@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="header">
+                <h1>{{'CUSTOMER.title'| translate}}</h1>
+            </div>
+            <div class="table">
+                <div class="add">
+                    <button mat-raised-button (click)="addCustomer()" class="add-customer-button"><i class="material-icons">add</i> <span> {{'CUSTOMER.add_customer'| translate}}</span></button>
+                </div>
+                <table mat-table [dataSource]="data" matSort class="mat-elevation-z8">
+                    <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
+                        <th mat-header-cell *matHeaderCellDef>
+                            <div style="display: flex; align-items: center;">
+                                <span mat-sort-header>{{col}}</span>
+                            </div>
+                        </th>
+                        <td mat-cell *matCellDef="let element" style="font-size: 13px;"> {{element[col]}}</td>
+                    </ng-container>
+                    <ng-container [matColumnDef]="'actions'">
+                        <th mat-header-cell *matHeaderCellDef>Actions</th>
+                        <td mat-cell *matCellDef="let element" style="width: 60px;">
+                            <button><i class="material-icons" style="color: rgb(75, 75, 75);" (click)="editCustomer(element)" matTooltip = "{{'CUSTOMER.edit'| translate}}">edit</i></button>
+                        </td>
+                    </ng-container>
+                    <ng-container [matColumnDef]="' '">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <td mat-cell *matCellDef="let element" style="width: 50px;">
+                            <button><i class="material-icons" style="color: rgb(75, 75, 75);" (click)="deleteCustomer(element)" matTooltip = "{{'CUSTOMER.delete'| translate}}">delete</i></button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <button class="close" (click)="close()"><i class="material-icons">close</i></button>
+    <h2 mat-dialog-title>Delete Customer</h2>
+    <h5>Are you sure to want remove this customer?</h5>
+
+    <mat-dialog-content>
+        <div class="content">
+            <div class="info">
+                <p>Name:</p> &nbsp;
+                <p>{{data.Name}}</p>
+            </div>
+            <div class="info">
+                <p>Surname:</p> &nbsp;
+                <p>{{data.Surname}}</p>
+            </div>
+            <div class="info">
+                <p>Phone:</p> &nbsp;
+                <p>{{data.Phone}}</p>
+            </div>
+        </div>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button mat-raised-button>Close</button>
+        <button mat-raised-button>Delete</button>
+    </mat-dialog-actions>
+</div>

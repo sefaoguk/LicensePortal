@@ -1,0 +1,22 @@
+{
+    "TOOLBAR":{
+        "settings":"Settings",
+        "exit":"Exit",
+        "language":"Language",
+        "turkish":"Turkish",
+        "english":"English"
+    },
+    "SIDEBAR": {
+        "home": "Home",
+        "customer": "Customer",
+        "license": "License",
+        "payment": "Payment",
+        "products": "Product"
+    },
+    "CUSTOMER":{
+        "title":"Customer Information",
+        "add_customer":"Add Customer",
+        "delete":"Delete",
+        "edit":"Edit"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "TOOLBAR":{
+        "settings":"Ayarlar",
+        "exit":"Çıkış",
+        "language":"Dil",
+        "turkish":"Türkçe",
+        "english":"İngilizce"
+    },
+    "SIDEBAR": {
+        "home": "Anasayfa",
+        "customer": "Müşteri",
+        "license": "Lisans",
+        "payment": "Ödeme",
+        "products": "Ürünler"
+    },
+    "CUSTOMER":{
+        "title":"Müşteri Bilgileri",
+        "add_customer":"Müşteri Ekle",
+        "delete":"Sil",
+        "edit":"Düzenle"
+    }
+}
