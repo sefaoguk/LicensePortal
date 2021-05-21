@@ -1,0 +1,129 @@
+<div class="container">
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true" class="sidebar">
+        <button mat-mini-fab (click)="isExpanded = !isExpanded;" class="example-icon">
+            <mat-icon aria-label="Menu">menu</mat-icon>
+        </button>
+        <mat-nav-list>
+            <mat-list-item class="sidebar-item" routerLink="/">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <h4 mat-line *ngIf="isExpanded" style="width: 180px;"> {{'SIDEBAR.home' | translate}} </h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="customer">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">{{'SIDEBAR.customer' | translate}}</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="license">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <h4 class="mat-line " mat-line *ngIf="isExpanded">{{'SIDEBAR.license' | translate}}</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="payment">
+                <mat-icon mat-list-icon>domain</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">{{'SIDEBAR.payment' | translate}}</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="product">
+                <mat-icon mat-list-icon>folder_shared</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">{{'SIDEBAR.products' | translate}}</h4>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-container class="drawer-container mat-typography" autosize>
+        <mat-toolbar class="toolbar">
+            <div class="ankageo">
+                <img class="logo" src="/assets/image/logo.png" alt="">
+                <img class="logo-title" src="/assets/image/ankageo.png" alt="">
+            </div>
+            <span class="example-spacer"></span>
+
+            <button mat-button [matMenuTriggerFor]="language">
+                <mat-icon><i class="material-icons" matTooltip="{{'TOOLBAR.language' | translate}}">language</i>
+                </mat-icon>
+            </button>
+            <mat-menu #language="matMenu" class="mat-menu">
+                <button mat-menu-item (click)="useLanguage('en')"> <span class="flag-icon flag-icon-us"></span>
+                    {{'TOOLBAR.english' | translate}}</button>
+                <button mat-menu-item (click)="useLanguage('tr')"><span class="flag-icon flag-icon-tr"></span>
+                    {{'TOOLBAR.turkish' | translate}} </button>
+            </mat-menu>
+
+
+            <button mat-button [matMenuTriggerFor]="settings">
+                <mat-icon><i class="material-icons" matTooltip="{{'TOOLBAR.settings' | translate}}">settings</i>
+                </mat-icon>
+            </button>
+            <mat-menu #settings="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+                <button mat-menu-item>Item 3</button>
+            </mat-menu>
+            <button mat-button [matMenuTriggerFor]="exit">
+                <mat-icon><i class="material-icons" matTooltip="{{'TOOLBAR.exit' | translate}}">exit_to_app</i>
+                </mat-icon>
+            </button>
+            <mat-menu #exit="matMenu">
+                <button mat-menu-item>Exit</button>
+            </mat-menu>
+
+        </mat-toolbar>
+
+        <div class="example-sidenav-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-container>
+</div>
+
+
+
+
+<!-- <mat-drawer-container class="example-container container" autosize>
+    <mat-drawer #drawer class="example-sidenav sidebar" mode="side">
+       <mat-nav-list>
+            <mat-list-item class="sidebar-item" routerLink="/">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <h4 mat-line >Home</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="customer">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line >Customer</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="license">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <h4 class="mat-line " mat-line >License</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="payment">
+                <mat-icon mat-list-icon>domain</mat-icon>
+                <h4 mat-line>Payment</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="product">
+                <mat-icon mat-list-icon>folder_shared</mat-icon>
+                <h4 mat-line>Product</h4>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container> -->
+<!--   <mat-nav-list>
+            <mat-list-item class="sidebar-item" routerLink="/">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Home</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="customer">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Customer</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="license">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <h4 class="mat-line " mat-line *ngIf="isExpanded">License</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="payment">
+                <mat-icon mat-list-icon>domain</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Payment</h4>
+            </mat-list-item>
+            <mat-list-item class="sidebar-item" routerLink="product">
+                <mat-icon mat-list-icon>folder_shared</mat-icon>
+                <h4 mat-line *ngIf="isExpanded">Product</h4>
+            </mat-list-item>
+        </mat-nav-list> -->
