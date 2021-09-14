@@ -20,13 +20,13 @@ export class DataServiceService {
   constructor() { }
 
   customers:ICustomer[] = [
-    {Id:1,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:2,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:3,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:4,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:5,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:6,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717},
-    {Id:7,Name:"FATMA", Surname:"KOYUNCU", Phone:5350852717}
+    {Id:1,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:2,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:3,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:4,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:5,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:6,Name:"Trial", Surname:"Trial", Phone:5301002020},
+    {Id:7,Name:"Trial", Surname:"Trial", Phone:5301002020}
   ]
 
   products: IProduct[]=[]
